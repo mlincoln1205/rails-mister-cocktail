@@ -1,18 +1,11 @@
 
 <!-- Image and text -->
-<nav class="navbar navbar-light bg-light">
-  <a class="navbar-brand" href="#">
-    <img src="https://images.vexels.com/media/users/3/156834/isolated/preview/7001ac7e95729ee662f2af03243f9af2-martini-cocktail-flat-icon-by-vexels.png"  width="30" height="30" class="d-inline-block align-top" alt="">
-    Mr. Cocktail
-  </a>
-   <%= link_to "Create a drink", new_cocktail_path, class: "btn btn-primary"  %>
-</nav>
 
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/05/22/13/gin-cocktails.jpg);">
   <div class="container text-center">
 
-    <h1>Mr. Cocktail</h1>
-    <p>Help yourself!</p>
+    <h1>Mr. Cocktail Da_ZL</h1>
+    <p>Help yourself!!</p>
 
     <a class="btn btn-flat" href="#">Apply now</a>
   </div>
@@ -21,19 +14,20 @@
 <div class="container">
 
 
-<div class="cards mt-3 text-center" style="height: 400px">
+<div class="cards mt-3 text-center" >
   <% @cocktails.each do |c| %>
-  <div class="card-category m-1" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://images.unsplash.com/photo-1582106245687-cbb466a9f07f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60)">
-    <p class="text-success "> I`m: <%= c.name %> | <%= link_to "more", cocktail_path(c) %> </p>
-
+  <% link = cl_image_path c.photo.key %>
+  <div class="card-category m-1 rounded" style="height: 200px;
+    background-size: cover; background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url( <%= link %> ) ">
+    <h5 class="text-warning mt-2"> Call for: <strong> <%= c.name %> </strong>  </h5>
+<p class="align-text-bottom" > <%= link_to "more", cocktail_path(c) %> </p>
       <% c.doses.each do |dose| %>
-      <p class="text-warning "> - <%= dose.ingredient %> </p>
+      <p class="text-white text-justify ml-3"> <%= dose.description %> - <%= dose.ingredient.name %> </p>
       <% end %>
-
-
-
   </div>
+
 <% end %>
+
 </div>
 
 
