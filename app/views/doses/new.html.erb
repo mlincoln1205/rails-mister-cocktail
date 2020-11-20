@@ -1,0 +1,12 @@
+<div class="container">
+  <h1>New Dose</h1>
+
+    <%= simple_form_for [@cocktail, @dose] do |c| %>
+    <%= c.input :description %>
+    <%= c.association :ingredient, collection: Ingredient.order("name"), as: :select %>
+    <%= c.button :submit, class: "btn-primary" %>
+      <% end %>
+
+  <%= link_to "Home", root_path %>
+
+</div>

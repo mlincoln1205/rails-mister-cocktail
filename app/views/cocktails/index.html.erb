@@ -1,0 +1,23 @@
+
+
+<div class="container">
+  <h1>Mr. Cocktail</h1>
+
+    <% @cocktails.each do |c| %>
+      <p> Id: <%= c.id %> | Cocktail Name: <%= c.name %> | <%= link_to "more", cocktail_path(c) %> </p>
+    <% end %>
+
+  <%= link_to "Create", new_cocktail_path %>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
