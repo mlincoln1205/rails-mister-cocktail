@@ -1,4 +1,7 @@
 .footer {
+  margin-top: 320px;
+  width: 100%;
+  bottom: 0px;
   background: #F4F4F4;
   display: flex;
   align-items: center;
@@ -6,6 +9,8 @@
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
+  background-color: #F8F9FA;
+  box-shadow: 0 0px 0px 1px rgba(0,0,0,0.2);
 }
 .footer-links {
   display: flex;
@@ -23,4 +28,12 @@
 }
 .footer .fa-heart {
   color: #D23333;
+}
+
+.log h4{
+  color: #F47F24;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  font-size: 32px;
+  font-weight: bold;
+  font-family: 'Pacifico', cursive;
 }

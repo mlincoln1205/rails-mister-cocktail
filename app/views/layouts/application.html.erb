@@ -4,34 +4,17 @@
     <title>RailsMisterCocktail</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   </head>
 
   <body>
-    <nav class="navbar navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="https://images.vexels.com/media/users/3/156834/isolated/preview/7001ac7e95729ee662f2af03243f9af2-martini-cocktail-flat-icon-by-vexels.png"  width="30" height="30" class="d-inline-block align-top" alt="">
-        Mr. Cocktail Da_ZL
-      </a>
-       <%= link_to "Create a drink", new_cocktail_path, class: "btn btn-primary"  %>
-    </nav>
-
-
+    <%= render "shared/navbar" %>
     <%= yield %>
-
-    <div class="footer">
-      <div class="footer-links">
-        <a href="https://github.com/mlincoln1205" target="_blank"><i class="fab fa-github" ></i></a>
-        <a href="https://www.linkedin.com/in/lincoln-marcolongo-85312367/" target="_blank"><i class="fab fa-linkedin" ></i></a>
-      </div>
-      <div class="footer-copyright">
-        This <i class="fas fa-glass-martini-alt"></i> was made with <i class="fas fa-heart"></i>
-      </div>
-    </div>
+    <%= render "shared/footer" %>
   </body>
 </html>
