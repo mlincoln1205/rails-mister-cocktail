@@ -1,5 +1,3 @@
-
-
 import Typed from 'typed.js';
 
 const loadDynamicBannerText = () => {
