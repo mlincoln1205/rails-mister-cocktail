@@ -1,11 +1,13 @@
 <div class="container">
-    <h3> <%= @cocktail.name  %> </h3>
-      <% @cocktail.doses.each do |d| %>
-        <p>  <%= d.description %> <%= d.ingredient.name %> | <%= link_to dose_path(d), method: :delete, data: { confirm: "Are you sure?"} do %>
-          <i class="far fa-trash-alt"></i>
-        <% end %>
-      </p>
-    <% end %>
+  <div class="card" style="border-radius: 5px; padding: 15px; border: none;">
+      <h3> <%= @cocktail.name  %> </h3>
+        <% @cocktail.doses.each do |d| %>
+          <p>  <%= d.description %> <%= d.ingredient.name %> | <%= link_to dose_path(d), method: :delete, data: { confirm: "Are you sure?"} do %>
+            <i class="far fa-trash-alt"></i>
+          <% end %>
+        </p>
+      <% end %>
+    </div>
   <p> <%= link_to "Create a dose", new_cocktail_dose_path(@cocktail) %> -  <%= link_to "Home", root_path %></p>
 </div>
 
